@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <style>
+/* Dit is het CSS gedeelte. Dit geeft de webite kleur, verandert het de font, grootte van het text
+waar het geplaatst moet worden ect. */
+
+/* Het JavaScript werkt niet echt (voor mijn gevoel dan), dus let daar ook niet op */
 
 /* Generale Stijlen */
     body {
@@ -86,7 +90,7 @@ li {
 
 #hero {
   background: rgba(255,255,255,0.05);
-  text-align: center;
+  text-align: left;
   padding: 100px 20px;
   color: #fff
 }
@@ -94,6 +98,12 @@ li {
 #hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
+}
+#hero img {
+  width: 25%;
+  height: 25%;
+  border-radius: 10px;
+  align-content: right;
 }
 
 /* Over Mij Sectie */
@@ -191,6 +201,8 @@ li {
   </style>
 
 <script>
+/* dit is een JavaSript script, het word gebruikt om de tekst een soort van "fade in" te geven,
+ ookal werkt het niet helemaal */
   const text = document.querySelectorAll('p, h1, h2');
 
 window.addEventListener('scroll', fadeIn);
@@ -219,6 +231,7 @@ function fadeIn() {
    <!-- Hero Sectie -->
   <section id="hero">
     <script>
+      /* Deze sctipt zorgt voor een soot "parallax" effect op het scherm */
       const bg = document.querySelector('#hero');
       window.addEventListener('scroll', parallax);
       
@@ -228,6 +241,9 @@ function fadeIn() {
       }
     </script>
     <h1>Welkom! Ik ben Vlad.</h1>
+    <a href="Vlad.jpg">
+      <img src="Vlad.jpg">
+    </a>
     <p>Een 15 Jarige MAVO'er</p>
   </section>
 
