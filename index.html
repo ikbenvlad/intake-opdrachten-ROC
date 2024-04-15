@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <style>
+
+/* Generale Stijlen */
+    body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e20400, #000e3d);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #FF6F91;
+}
+
+img {
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: rotate(5deg) scale(1.001);
+}
+
+/* Sectie Stijlen */
+section {
+  padding: 40px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;  
+}
+
+p {
+  line-height: 1.5;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Header */
+head {
+  background: #000e3d;
+  padding: 20px;
+  color: #fff;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #fff;
+  margin-left: 20px;
+}  
+
+nav {
+  display: flex;
+  justify-content: center; 
+}
+
+nav a {
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+li {
+  margin: 10px 0;
+  color: #fff
+}
+
+/* Hero Sectie ("Welkom! Ik ben Vlad.") */
+
+#hero {
+  background: rgba(255,255,255,0.05);
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Over Mij Sectie */
+
+#over-mij {
+  padding: 80px 20px;
+}
+
+#over-mij h2 {
+  font-size: 36px; 
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+#over-mij p {
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Werk Sectie */
+
+#werk {
+  background: rgba(255,255,255,0.05);
+  padding: 80px 20px; 
+}
+
+.project1 {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.project1 img {
+  width: 100%;
+  border-radius: 10px;  
+}
+
+.project1 h3 {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.project2 {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.project2 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project2 h3 {
+  font-size: 24px;
+  margin: 20 px 0;
+  color: #fff;
+}
+
+/* Contact Sectie */
+
+#contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;  
+}
+
+#contact li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+#contact a {
+  color: #0093d2;
+  text-decoration: underline;
+}
+
+/* Media gedeelte */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+  </style>
+
+<script>
+  const text = document.querySelectorAll('p, h1, h2');
+
+window.addEventListener('scroll', fadeIn);
+
+function fadeIn() {
+  for (let i = 0; i < text.length; i++) {  
+    let distance = text[i].getBoundingClientRect().top - window.innerHeight;
+    if (distance < 0) {
+      text[i].style.opacity = Math.abs(distance) / 500; 
+    }
+  }
+}
+</script>
+
+<head>
+  <title>Vlad A. Tarba - Portfolio</title>
+</head>
+<body>
+  <!-- Pagina's -->
+  <nav>
+    <a href="#over-mij">Over mij</a> 
+    <a href="#werk">Mijn Werk</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+   <!-- Hero Sectie -->
+  <section id="hero">
+    <script>
+      const bg = document.querySelector('#hero');
+      window.addEventListener('scroll', parallax);
+      
+      function parallax() {
+        let offset = window.pageYOffset;
+        bg.style.backgroundPositionY = offset * 0.7 + 'px';
+      }
+    </script>
+    <h1>Welkom! Ik ben Vlad.</h1>
+    <p>Een 15 Jarige MAVO'er</p>
+  </section>
+
+  <!-- Over Mij Sectie -->
+  <section id="over mij">
+    <h2>Over Mij</h2>
+    <p>Mijn naam is Vlad. Ik ben een 15 jarige die oorspronkelijk uit Roemenië komt. Mijn hobbies zijn:</p>
+    <ul>
+    <li>
+        Gitaar Spelen
+    </li>
+    <li>
+        Gamen
+    </li>
+    <li>    
+        Veel muziek luisteren
+    </li>    
+    <li>    
+        Basketball
+    </li>
+    </ul>
+
+    <a href="basketball.mp4">
+    <video width="300" height="500" controls>
+    <source src="basketball.mp4" type="video/mp4">
+    <source src="basketball.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+    </video>
+    </a>
+    <p>Vlad die basketball zit te spelen</p>
+  </section>
+
+  <!-- Werk Sectie -->  
+  <section id="werk">
+    
+    <h2>Mijn werk</h2>
+    
+    <div class="project1">
+      <h3>Caesar Shift Bot.</h3>
+      <p>Het eerste project dat ik laat zien is mijn PWS praktijk. Ik heb met HTML en CSS een bot gemaakt die letters in een zin husselen.<br>
+      Ik heb dit voornamelijk gemaakt omdat het mijn praktijk deel is voor mijn profielwerkstuk.<br>
+      Ik zou dat eigenlijk als intake opdracht kunnen gebruiken, maar ik wil mijzelf ook uitdagen om iets meer "persoonlijks" te maken.</p>
+      <a href="https://github.com/ikbenvlad/Caesar-Cipher-Shifts/index.html">Klik hier om de code te zien.</a>
+      <br>
+      <a href="shift.png">
+      <img width="700" length="500" src="shift.png">
+      </a>
+    </div>
+    
+    <div class="project2">
+      <h3>Blender</h3>
+      <a href="Gun.png">
+      <img width="500" lenght="300" src="Gun.png">
+      </a>
+      <p>Ook heb ik een basiskennis in het programma Blender. Ik heb daar een paar projecten in gemaakt, zoals dit wapen.<br>
+      Het is niet Te lastig, alleen duurt het wel een beetje lang.</p>
+    </div>
+
+  </section>
+  
+
+  <!-- Contact Sectie -->
+  <section id="contact">
+    <h2>Je kan mij hier finden:</h2>
+    <li>
+        <a href="https://mail.google.com/">Gmail</a>: vlad@tarba.nl
+    </li>
+    <li>
+        <a href="https://discord.com/channels/@me">Discord</a>: ikbenvlad
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ikbenvlad/">Instagram</a>
+    </li>
+    <li>
+        <a href="https://github.com/ikbenvlad">GitHub</a>
+    </li>
+  </section>
+
+</body>
+</html>
