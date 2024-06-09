@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
+        /* Dit zijn alle stijlen van de website, de fonts, kleuren, grootte van het text, etc. */
         body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #846766;
+        background: linear-gradient(to bottom, #846766, #a76c6a, #846766);
         }
 
         header {
@@ -58,6 +59,15 @@
         text-decoration: underline;
         }
 
+        a:hover {
+            color: #b4b4b4
+        }
+
+        nav a:hover {
+            color: #949494;
+
+        }
+
         #intro img {
             width: 25%;
             height: 25%;
@@ -66,12 +76,15 @@
         }
     </style>
 <head>
+    <!-- Dit zijn de meta tags van de pagina, deze bepalen de pagina's naam, de taal, de kleur van de pagina, en de grootte van de pagina. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Game Engine Functies</title>
 </head>
+
 <body>
     <header>
+        <!--dit is het navigatie menu, net onder de text "Unity Game Engine Functies"-->
         <h1>Unity Game Engine Functies</h1>
         <nav>
             <ul>
@@ -86,6 +99,7 @@
     </header>
 
     <main>
+        <!--Eerste sectie genaamd introductie, hierin word de introductie van de game engine uitgelegd-->
         <section id="intro">
             <a href="logo unity.png">
                 <img src="logo unity.png">
@@ -94,6 +108,7 @@
             <p>Unity is een game engine ontwikkeld door <a href=https://en.wikipedia.org/wiki/Unity_Technologies>Unity Technologies</a>. Het is een software die gebruikers helpt om verschillende video-spellen te bouwen en publiceren, en heeft (sinds 2020) al 5 miljard downloads.</p>
         </section>
 
+        <!--Tweede sectie genaamd graphics, hierin word de graphics van de engine uitgelegd-->
         <section id="graphics">
             <h2>Graphics</h2>
             <p>Unity geeft de gebruiker een robuuste graphics engine de verschillende renderingstecknieken ondersteunt. Een tutorial van dit kan je <a href=https://learn.unity.com/tutorial/introduction-to-lighting-and-rendering-2019-3#>hier</a> bekijken. Het ondersteunt ook een variatie formaten voor het importen van bestanden zoals 3D modellen, textures en animaties. Dit zorgt voor mooie visuele spellen zoals Genshin Impact en Firewatch.</p>
@@ -106,16 +121,19 @@
             
         </section>
 
+        <!--Derde sectie genaamd Physics, hierin worden de fysica uitgelegd in de game engine-->
         <section id="physics">
             <h2>Physics</h2>
             <p>Unity's physics engine (wat voor de fysica in de sepellen zorgt) zorgt voor realisteche simulaties van physice interacties tussen objecten in de game wereld. Developers van spellen kunnen eigenschappen zoals gewicht, frictie en botsingen manipuleren om een meeslepende en geloofwaardige omgeving te maken. Voorbeelden hiervan zijn <a href="https://store.steampowered.com/app/264710/Subnautica/">Subnautica</a> en <a href="https://www.escapefromtarkov.com/">Escape from Tarkov</a>.</p>
         </section>
 
+        <!--Vierde sectie, hierin word uitgelegd wat voor audio de engine kan gebruiken-->
         <section id="audio">
             <h2>Audio</h2>
             <p>Unity biedt een uitgebreide audio systeem die vele audio soorten zoals .wav, .mp3 en .ogg bestanden ondersteunt. Verschillende functies zoals 3-dimentionale audio plaatsing, audio mixing en effects om een nog betere ervaring te geven. Genres zoals horror spellen hebben audio nodig on het angst-factor hoog te houden. Voorbeelden van horror spellen gemaakt in Unity zijn <a href="https://store.steampowered.com/app/1671340/Fears_to_Fathom__Home_Alone/">Fears to Fathom - Home Alone</a> en <a href="https://store.steampowered.com/app/1275890/Baldis_Basics_Plus/">Baldi's Basics Plus</a>.</p>
         </section>
 
+        <!--Vijfde sectie, hierin word uitgelegd wat voor coderings talen de engine kan gebruiken, waaronder C# en UnityScript-->
         <section id="scripting">
             <h2>Scripting</h2>
             <p>Unity ondersteunt het scripten in C# en UnityScript (een variatie van JavaSript). Hierdoor kunnen developers aangepaste gedrag, interacties en game logica coderen. Het scriptingssysteem id sterk en flexibel, zodat developers Unity's functionaliteit verder kunnen uitbreiden om unieke ervaringen te maken. Tutorials voor het scripten van spellen in Unity vind je als je de foto klikt.</p>
@@ -124,6 +142,7 @@
             </a>
         </section>
 
+        
         <section id="media">
             <h2>Media</h2>
             <a href="firewatch.png">
@@ -139,27 +158,19 @@
     </main>
 
     <footer>
-        <p>A website built by <a href=https://github.com/ikbenvlad>Vlad Tarba</a></p>
+        <p>Een website gemaakt door <a href=https://github.com/ikbenvlad>Vlad Tarba</a></p>
     </footer>
     <script>
-        // Get all navigation links
-const navLinks = document.querySelectorAll('nav ul li a');
-
-// Add click event listener to each link
-navLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-
-    // Get the target section ID from the link's href
-    const targetId = event.currentTarget.getAttribute('href');
-
-    // Get the target section element
-    const targetSection = document.querySelector(targetId);
-
-    // Scroll to the target section smoothly
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Script voor het smooth scrollen navigatie menu
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
   });
-});
     </script>
 </body>
 </html>
