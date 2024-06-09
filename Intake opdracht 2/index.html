@@ -48,6 +48,11 @@
         text-align: center;
         }
 
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
         a {
         color: #333;
         text-decoration: underline;
@@ -75,24 +80,25 @@
                 <li><a href="#physics">Physics</a></li>
                 <li><a href="#audio">Audio</a></li>
                 <li><a href="#scripting">Scripting</a></li>
+                <li><a href="#media">Media</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="intro">
-            <h2>Introductie</h2>
             <a href="logo unity.png">
                 <img src="logo unity.png">
             </a>
+            <h2>Introductie</h2>
             <p>Unity is een game engine ontwikkeld door <a href=https://en.wikipedia.org/wiki/Unity_Technologies>Unity Technologies</a>. Het is een software die gebruikers helpt om verschillende video-spellen te bouwen en publiceren, en heeft (sinds 2020) al 5 miljard downloads.</p>
         </section>
 
         <section id="graphics">
             <h2>Graphics</h2>
-            <p>Unity geeft de gebruiker een robuuste graphics engine de verschillende renderingstecknieken ondersteunt. Een tutorial van dit kan je <a href=https://learn.unity.com/tutorial/introduction-to-lighting-and-rendering-2019-3#>hier</a> bekijken.</p>
+            <p>Unity geeft de gebruiker een robuuste graphics engine de verschillende renderingstecknieken ondersteunt. Een tutorial van dit kan je <a href=https://learn.unity.com/tutorial/introduction-to-lighting-and-rendering-2019-3#>hier</a> bekijken. Het ondersteunt ook een variatie formaten voor het importen van bestanden zoals 3D modellen, textures en animaties. Dit zorgt voor mooie visuele spellen zoals Genshin Impact en Firewatch.</p>
             <a href="Fantasy Kingdom In Unity 6.mp4">
-                <video width="500" height="300" controls>
+                <video width="500" height="300" volume="0.25" controls>
                     <source src="Fantasy Kingdom In Unity 6.mp4" type="video/mp4">
                     <source src="Fantasy-Kingdom-In-Unity-6.ogg" type="video/ogg">
                 </video>
@@ -102,22 +108,38 @@
 
         <section id="physics">
             <h2>Physics</h2>
-            <p>Unity's physics engine allows for realistic simulations of physical interactions between objects in the game world. Developers can define properties such as mass, friction, and collisions to create immersive and believable environments.</p>
+            <p>Unity's physics engine (wat voor de fysica in de sepellen zorgt) zorgt voor realisteche simulaties van physice interacties tussen objecten in de game wereld. Developers van spellen kunnen eigenschappen zoals gewicht, frictie en botsingen manipuleren om een meeslepende en geloofwaardige omgeving te maken. Voorbeelden hiervan zijn <a href="https://store.steampowered.com/app/264710/Subnautica/">Subnautica</a> en <a href="https://www.escapefromtarkov.com/">Escape from Tarkov</a>.</p>
         </section>
 
         <section id="audio">
             <h2>Audio</h2>
-            <p>Unity offers a comprehensive audio system that supports various audio formats and features like 3D positional audio, audio mixing, and audio effects. This allows developers to create rich and immersive soundscapes for their games.</p>
+            <p>Unity biedt een uitgebreide audio systeem die vele audio soorten zoals .wav, .mp3 en .ogg bestanden ondersteunt. Verschillende functies zoals 3-dimentionale audio plaatsing, audio mixing en effects om een nog betere ervaring te geven. Genres zoals horror spellen hebben audio nodig on het angst-factor hoog te houden. Voorbeelden van horror spellen gemaakt in Unity zijn <a href="https://store.steampowered.com/app/1671340/Fears_to_Fathom__Home_Alone/">Fears to Fathom - Home Alone</a> en <a href="https://store.steampowered.com/app/1275890/Baldis_Basics_Plus/">Baldi's Basics Plus</a>.</p>
         </section>
 
         <section id="scripting">
             <h2>Scripting</h2>
-            <p>Unity supports scripting in C# and UnityScript (a variant of JavaScript), allowing developers to create custom behaviors, interactions, and game logic. The scripting system is powerful and flexible, enabling developers to extend Unity's functionality and create unique gameplay experiences.</p>
+            <p>Unity ondersteunt het scripten in C# en UnityScript (een variatie van JavaSript). Hierdoor kunnen developers aangepaste gedrag, interacties en game logica coderen. Het scriptingssysteem id sterk en flexibel, zodat developers Unity's functionaliteit verder kunnen uitbreiden om unieke ervaringen te maken. Tutorials voor het scripten van spellen in Unity vind je als je de foto klikt.</p>
+            <a href="beginner scripting.png">
+            <a href="https://learn.unity.com/project/beginner-gameplay-scripting"><img width=500 height=300 src="beginner scripting.png"></a>
+            </a>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <a href="firewatch.png">
+                <img height="200" width="350" src="firewatch.png">
+            </a>
+            <p>Firewatch, winnaar van de 2016 Golden Joystick 'Best Indiegame' award.</p>
+
+            <a href="genshin impact.png">
+                <img height="200" width="350" src="genshin impact.png">
+            </a>
+            <p>Genshin Impact, winnaar van de 2021 The Game Awards 'Best Mobile Game' award.</p>
         </section>
     </main>
 
     <footer>
-        <p>A website built by Vlad Tarba</p>
+        <p>A website built by <a href=https://github.com/ikbenvlad>Vlad Tarba</a></p>
     </footer>
     <script>
         // Get all navigation links
