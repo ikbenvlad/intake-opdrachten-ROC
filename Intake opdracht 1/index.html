@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <style>
 /* Dit is het CSS gedeelte. Dit geeft de webite kleur, verandert het de font, grootte van het text
 waar het geplaatst moet worden ect. */
@@ -139,8 +140,10 @@ li {
 }
 
 .project1 img {
-  width: 100%;
-  border-radius: 10px;  
+  width: 75%;
+  height: 75%;
+  border-radius: 10px;
+  align-content: right; 
 }
 
 .project1 h3 {
@@ -157,8 +160,10 @@ li {
 }
 
 .project2 img {
-  width: 100%;
+  width: 35%;
+  height: 35%;
   border-radius: 10px;
+  align-content: right;
 }
 
 .project2 h3 {
@@ -230,8 +235,8 @@ function fadeIn() {
 
    <!-- Hero Sectie -->
   <section id="hero">
-    <script>
-      /* Deze sctipt zorgt voor een soot "parallax" effect op het scherm */
+  <script>
+      /* Deze sctipt zorgt voor een soort "parallax" effect op het scherm */
       const bg = document.querySelector('#hero');
       window.addEventListener('scroll', parallax);
       
@@ -240,17 +245,18 @@ function fadeIn() {
         bg.style.backgroundPositionY = offset * 0.7 + 'px';
       }
     </script>
+    
     <h1>Welkom! Ik ben Vlad.</h1>
-    <a href="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/Vlad.jpg">
-      <img src="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/Vlad.jpg">
+    <a href="https://raw.githubusercontent.com/ikbenvlad/intake-opdrachten-ROC/refs/heads/main/Intake%20opdracht%201/Vlad.jpg">
+      <img src="https://raw.githubusercontent.com/ikbenvlad/intake-opdrachten-ROC/refs/heads/main/Intake%20opdracht%201/Vlad.jpg">
     </a>
-    <p>Een 15 Jarige MAVO'er</p>
+    <p>Een 15 Jarige HAVO'er</p>
   </section>
 
   <!-- Over Mij Sectie -->
   <section id="over mij">
     <h2>Over Mij</h2>
-    <p>Mijn naam is Vlad. Ik ben een 15 jarige die oorspronkelijk uit Roemenië komt. Mijn hobbies zijn:</p>
+    <p>Mijn naam is Vlad. Ik ben een 15 jarige die oorspronkelijk uit Roemenie komt. Mijn hobbies zijn:</p>
     <ul>
     <li>
         Gitaar Spelen
@@ -265,19 +271,16 @@ function fadeIn() {
         Basketball
     </li>
     </ul>
-
-    <a href="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/basketball.mp4">
-    <video width="300" height="500" controls>
-    <source src="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/basketball.mp4" type="video/mp4">
-    <source src="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/basketball.ogg" type="video/ogg">
-    Your browser does not support HTML video.
-    </video>
-    </a>
-    <p>Vlad die basketball zit te spelen</p>
+    <a href="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/basketball.mp4"></a>
   </section>
 
   <!-- Werk Sectie -->  
   <section id="werk">
+  <style>
+  img:hover {
+    transform: rotate(0deg) scale(1.05);
+    }
+  </style>
     
     <h2>Mijn werk</h2>
     
@@ -286,20 +289,18 @@ function fadeIn() {
       <p>Het eerste project dat ik laat zien is mijn PWS praktijk. Ik heb met HTML en CSS een bot gemaakt die letters in een zin husselen.<br>
       Ik heb dit voornamelijk gemaakt omdat het mijn praktijk deel is voor mijn profielwerkstuk.<br>
       Ik zou dat eigenlijk als intake opdracht kunnen gebruiken, maar ik wil mijzelf ook uitdagen om iets meer "persoonlijks" te maken.</p>
-      <a href="https://github.com/ikbenvlad/intake-opdracht/blob/main/Intake%20opdracht%20ROC/index.html">Klik hier om de code te zien.</a>
+      <a href="https://github.com/ikbenvlad/intake-opdracht/blob/main/Intake%20opdracht%20ROC/index.html">Klik hier om de code te bekijken.</a>
       <br>
-      <a href="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/shift.png">
-      <a href="https://ikbenvlad.neocities.org/"><img width="700" length="500" src="shift.png"></a>
-      </a>
+      <a href="https://ikbenvlad.neocities.org/"><img width=700 height=900 src="https://raw.githubusercontent.com/ikbenvlad/intake-opdrachten-ROC/refs/heads/main/Intake%20opdracht%201/shift.png">      </a>
     </div>
     
     <div class="project2">
       <h3>Blender</h3>
-      <a href="https://github.com/ikbenvlad/intake-opdrachten-ROC/blob/main/Intake%20opdracht%201/Gun.png">
-      <img width="500" lenght="300" src="Gun.png">
+      <a href="https://raw.githubusercontent.com/ikbenvlad/intake-opdrachten-ROC/refs/heads/main/Intake%20opdracht%201/Gun.png">
+      <img height=500 width=300 src="https://raw.githubusercontent.com/ikbenvlad/intake-opdrachten-ROC/refs/heads/main/Intake%20opdracht%201/Gun.png">
       </a>
       <p>Ook heb ik een basiskennis in het programma Blender. Ik heb daar een paar projecten in gemaakt, zoals dit wapen.<br>
-      Het is niet Te lastig, alleen duurt het wel een beetje lang.</p>
+      Het is niet te lastig, alleen duurt het wel een beetje lang.</p>
     </div>
 
   </section>
